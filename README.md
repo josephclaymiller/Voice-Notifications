@@ -26,5 +26,5 @@ Future Features:
 - [ ] User can have more than one notification set at a time
 - [ ] User can view voice clips as images
 - [ ] User can edit voice clips
-- [ ] User can set notification for a set date/time
+- [ ] User can set notification for a date/time
 - [ ] User can set recurring notifications
