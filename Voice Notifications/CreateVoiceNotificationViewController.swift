@@ -24,12 +24,18 @@ class CreateVoiceNotificationViewController: UIViewController {
     
     @IBAction func setNotificationButtonPressed(_ sender: UIButton) {
         print(#function)
+        let seconds = datePicker.countDownDuration
+        let title = titleLabel.text!
+        let body = bodyLabel.text!
+        let notification = Notification(title: title, body: body, seconds: seconds)
+        print(notification.seconds)
     }
     
-    @IBAction func datePicked(_ sender: UIDatePicker) {
-        print(#function)
-        print(sender.date)
-    }
+//    @IBAction func datePicked(_ sender: UIDatePicker) {
+//        print(#function)
+//        print(sender.countDownDuration) // time selected in seconds
+//    }
+    
     /*
     // MARK: - Navigation
 

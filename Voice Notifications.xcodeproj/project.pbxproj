@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD1A19562780B741006AB797 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A19552780B741006AB797 /* SoundManager.swift */; };
+		CD1A19582780CDA8006AB797 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A19572780CDA8006AB797 /* Notification.swift */; };
 		CD97ED04277FBDC40084E94A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97ED03277FBDC40084E94A /* AppDelegate.swift */; };
 		CD97ED06277FBDC40084E94A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97ED05277FBDC40084E94A /* SceneDelegate.swift */; };
 		CD97ED08277FBDC40084E94A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97ED07277FBDC40084E94A /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		CD1A19552780B741006AB797 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		CD1A19572780CDA8006AB797 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CD97ED00277FBDC40084E94A /* Voice Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Notifications.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD97ED03277FBDC40084E94A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD97ED05277FBDC40084E94A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				CD97ED07277FBDC40084E94A /* ViewController.swift */,
 				CD97ED09277FBDC40084E94A /* Main.storyboard */,
 				CD97ED19278009740084E94A /* CreateVoiceNotificationViewController.swift */,
+				CD1A19572780CDA8006AB797 /* Notification.swift */,
 				CD1A19552780B741006AB797 /* SoundManager.swift */,
 				CD97ED17277FBDEE0084E94A /* WelcomeViewController.swift */,
 				CD97ED0C277FBDC60084E94A /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				CD97ED08277FBDC40084E94A /* ViewController.swift in Sources */,
 				CD97ED18277FBDEE0084E94A /* WelcomeViewController.swift in Sources */,
 				CD97ED04277FBDC40084E94A /* AppDelegate.swift in Sources */,
+				CD1A19582780CDA8006AB797 /* Notification.swift in Sources */,
 				CD97ED1A278009740084E94A /* CreateVoiceNotificationViewController.swift in Sources */,
 				CD97ED06277FBDC40084E94A /* SceneDelegate.swift in Sources */,
 				CD1A19562780B741006AB797 /* SoundManager.swift in Sources */,

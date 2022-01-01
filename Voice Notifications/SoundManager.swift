@@ -16,7 +16,7 @@ class SoundManager {
     var audioPlayer: AVAudioPlayer!
     let audioFileName = "voice_memo_recording.m4a"
     var audioFileURL: URL {
-        getSoundFolder().appendingPathComponent(audioFileName)
+        SoundManager.getSoundFolder().appendingPathComponent(audioFileName)
     }
     
     init() {
@@ -32,7 +32,7 @@ class SoundManager {
         
     }
     
-    func getSoundFolder() -> URL {
+    static func getSoundFolder() -> URL {
         let paths = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
         let url = paths[0].appendingPathComponent("Sounds", isDirectory: true)
         try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: false, attributes: nil)
