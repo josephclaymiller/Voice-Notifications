@@ -17,23 +17,19 @@ class WelcomeViewController: UIViewController {
     
     let notificationCenter = UNUserNotificationCenter.current()
     var recordingSession: AVAudioSession!
+    var soundManager: SoundManager! = SoundManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        recordingSession = soundManager.recordingSession
     }
     
     @IBAction func continuePressed(_ sender: Any) {
-        // Set up recording session
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            askPermission()
-        } catch {
-            // failed to record!
-            print("Failed to set up recording session")
-        }
+        // Ask permission only one time
+        askPermission()
+        self.dismiss(animated: true, completion: nil)
     }
     
     // permission for audio recording and for sending notifications
@@ -105,7 +101,13 @@ class WelcomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // TODO: check if new user, if not skip welcome message
+        // check if new user, if not skip welcome message (redundent)
+        // disable for testing
+        if let isNewUser = UserDefaults.standard.value(forKey: "isNewUser") {
+            if !(isNewUser as! Bool) {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     /*

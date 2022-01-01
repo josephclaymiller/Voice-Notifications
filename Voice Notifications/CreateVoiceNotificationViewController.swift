@@ -8,14 +8,28 @@
 import UIKit
 
 class CreateVoiceNotificationViewController: UIViewController {
-
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var bodyLabel: UILabel!
+    @IBOutlet var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func recordButtonPressed(_ sender: UIButton) {
+        print(#function)
+    }
+    
+    @IBAction func setNotificationButtonPressed(_ sender: UIButton) {
+        print(#function)
+    }
+    
+    @IBAction func datePicked(_ sender: UIDatePicker) {
+        print(#function)
+        print(sender.date)
+    }
     /*
     // MARK: - Navigation
 
