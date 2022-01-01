@@ -23,7 +23,9 @@ Features in development:
 
 
 Future Features:
-- [ ] User can have more than one notification set at a time
+- [ ] User can have more than one notification set at a time:
+- [ ] User can view list of notifications
+- [ ] User can remove a scheduled notification
 - [ ] User can view voice clips as images
 - [ ] User can edit voice clips
 - [ ] User can set notification for a date/time
