@@ -10,14 +10,15 @@ The following functionality is completed:
 - [x] First time user sees a welcome message
 - [x] User asked for permission to use microphone and notifications
 - [x] User directed to settings if permission was previously denied
+- [x] User can set notification to be sent after chosen amount of time
+- [x] User recieves notification after a set amount time
 
 Features in development:
 
 - [ ] User can record voice clip (30 seconds or less)
 - [ ] User can play voice clip
 - [ ] User can re-record voice clip
-- [ ] User can set notification to be sent after chosen amount of time
-- [ ] User recieves notification with voice after a set amount time
+- [ ] User hears own voice when notification received
 
 Future Features:
 
