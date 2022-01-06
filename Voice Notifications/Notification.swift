@@ -14,7 +14,7 @@ class Notification {
     
     var title: String
     var body: String
-//    var voice
+//    var soundFileName: String
     var seconds: TimeInterval
     
     init(title: String, body: String, seconds: TimeInterval) {
@@ -25,21 +25,13 @@ class Notification {
         Notification.all.append(self)
     }
     
-//    func createNotification(title: String, body: String, minutes: Int = 1) {
-//        createNotification(title: title, body: body, seconds: minutes * 60)
-//    }
-    
-    func createNotification() {
+    private func createNotification() {
         print(#function)
         let content = UNMutableNotificationContent()
+        let notificatinSoundFileName = UNNotificationSoundName(rawValue: SoundManager.shared.audioFileName)
         content.title = title
         content.body = body
-    //        content.sound = UNNotificationSound.default
-//        let notificatinSoundFileName = UNNotificationSoundName(rawValue: SoundManager.shared.audioFileName)
-    //        print(notificatinSoundFileName)
-//        content.sound = UNNotificationSound(named: notificatinSoundFileName)
-//        print(content.sound)
-        content.sound = UNNotificationSound.default
+        content.sound = UNNotificationSound(named: notificatinSoundFileName)
         
         // Configure the recurring date.
     //        var dateComponents = DateComponents()
@@ -66,6 +58,4 @@ class Notification {
     }
 
 }
-
-// MARK: - Notifications
 

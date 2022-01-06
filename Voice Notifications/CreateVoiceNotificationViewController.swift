@@ -12,6 +12,11 @@ class CreateVoiceNotificationViewController: UIViewController {
     @IBOutlet var bodyLabel: UILabel!
     @IBOutlet var datePicker: UIDatePicker!
     
+    var isRecording: Bool = false
+    
+    // sound manager to manage audio recordings
+    let soundManager = SoundManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +25,14 @@ class CreateVoiceNotificationViewController: UIViewController {
     
     @IBAction func recordButtonPressed(_ sender: UIButton) {
         print(#function)
+        soundManager.toggleRecording()
+        switch isRecording {
+        case false:
+            sender.setTitle("Stop Recording", for: .normal)
+        case true:
+            sender.setTitle("Re-record", for: .normal)
+        }
+        isRecording = !isRecording
     }
     
     @IBAction func setNotificationButtonPressed(_ sender: UIButton) {

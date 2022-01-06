@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD1A19562780B741006AB797 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A19552780B741006AB797 /* SoundManager.swift */; };
 		CD1A19582780CDA8006AB797 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A19572780CDA8006AB797 /* Notification.swift */; };
+		CD8006642786AA32001F0BB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8006632786AA32001F0BB9 /* README.md */; };
 		CD97ED04277FBDC40084E94A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97ED03277FBDC40084E94A /* AppDelegate.swift */; };
 		CD97ED06277FBDC40084E94A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97ED05277FBDC40084E94A /* SceneDelegate.swift */; };
 		CD97ED08277FBDC40084E94A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97ED07277FBDC40084E94A /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		CD1A19552780B741006AB797 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		CD1A19572780CDA8006AB797 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		CD8006632786AA32001F0BB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD97ED00277FBDC40084E94A /* Voice Notifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voice Notifications.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD97ED03277FBDC40084E94A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD97ED05277FBDC40084E94A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		CD97ECF7277FBDC40084E94A = {
 			isa = PBXGroup;
 			children = (
+				CD8006632786AA32001F0BB9 /* README.md */,
 				CD97ED02277FBDC40084E94A /* Voice Notifications */,
 				CD97ED01277FBDC40084E94A /* Products */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				CD97ED10277FBDC60084E94A /* LaunchScreen.storyboard in Resources */,
 				CD97ED0D277FBDC60084E94A /* Assets.xcassets in Resources */,
+				CD8006642786AA32001F0BB9 /* README.md in Resources */,
 				CD97ED0B277FBDC40084E94A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

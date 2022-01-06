@@ -12,9 +12,6 @@ class ViewController: UIViewController {
     // persistence
     let defaults = UserDefaults.standard
     
-    // sound manager to manage audio recordings
-    let soundManager = SoundManager.shared
-    
     // notifications
     let notificationCenter = UNUserNotificationCenter.current()
 
