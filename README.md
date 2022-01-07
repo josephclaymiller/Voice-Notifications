@@ -1,7 +1,7 @@
 # Voice Notifications
 Create notifications for your iPhone that play a short message in your own voice sent at a time of your choosing. 
 
-Time spent: **11** hours spent in total
+Time spent: **12** hours spent in total
 
 ## User Stories
 
