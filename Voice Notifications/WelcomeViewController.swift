@@ -100,16 +100,6 @@ class WelcomeViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // check if new user, if not skip welcome message (redundent)
-        // disable for testing
-        if let isNewUser = UserDefaults.standard.value(forKey: "isNewUser") {
-            if !(isNewUser as! Bool) {
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
-    }
-    
     /*
     // MARK: - Navigation
 

@@ -29,12 +29,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         print(#function)
         // Check if new user and if so show welcome message
-        //defaults.set(true, forKey: "isNewUser") // testing
-        if defaults.value(forKey: "isNewUser") as! Bool {
-            showWelcomeMessage()
-            defaults.set(false, forKey: "isNewUser")
-        } else {
-            //showCreateView()
+//        defaults.set(true, forKey: "isNewUser") // testing
+        if let isNewUser = defaults.value(forKey: "isNewUser") as? Bool {
+            if isNewUser {
+                showWelcomeMessage()
+                defaults.set(false, forKey: "isNewUser")
+            }
         }
     }
     
