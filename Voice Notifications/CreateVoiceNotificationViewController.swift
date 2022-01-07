@@ -8,8 +8,8 @@
 import UIKit
 
 class CreateVoiceNotificationViewController: UIViewController {
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var bodyLabel: UILabel!
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var bodyTextField: UITextView!
     @IBOutlet var datePicker: UIDatePicker!
     
     var isRecording: Bool = false
@@ -38,13 +38,15 @@ class CreateVoiceNotificationViewController: UIViewController {
     @IBAction func setNotificationButtonPressed(_ sender: UIButton) {
         print(#function)
         let seconds = datePicker.countDownDuration
-        let title = titleLabel.text!
-        let body = bodyLabel.text!
+        let title = titleTextField.text!
+        let body = bodyTextField.text!
         let notification = Notification(title: title, body: body, seconds: seconds)
         print(notification.seconds)
     }
     
-//    @IBAction func datePicked(_ sender: UIDatePicker) {
+
+   // TODO: Let user set date for notification instead of timer
+//        @IBAction func datePicked(_ sender: UIDatePicker) {
 //        print(#function)
 //        print(sender.countDownDuration) // time selected in seconds
 //    }
