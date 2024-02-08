@@ -24,9 +24,6 @@ The following functionality is completed:
 - [x] User can play voice clip
 - [x] App Icon
 
-Features in development:
-- [ ] User can choose date for notification to be sent
-
 Planned Features:
 
 - [ ] User can have more than one notification set at a time
