@@ -1,7 +1,7 @@
 # Voice Notifications
 Create notifications for your iPhone that play a short message in your own voice sent at a time of your choosing. 
 
-Time spent: **12** hours
+Time spent: **14** hours
 
 ## User Stories
 
@@ -17,10 +17,11 @@ The following functionality is completed:
 - [x] User hears own voice when notification received
 - [x] User can set title for notification
 - [x] User can set message for notification
+- [x] User can play voice clip
+- [x] App Icon
 
 Features in development:
-
-- [ ] User can play voice clip
+- [ ] User can choose date for notification to be sent
 
 Planned Features:
 
