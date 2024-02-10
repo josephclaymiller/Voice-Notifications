@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bnd-Pu-RsW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,26 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYI-cZ-daj">
-                                <rect key="frame" x="115" y="433" width="185" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Voice Notification"/>
-                                <connections>
-                                    <action selector="createButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wxn-dO-ydw"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Close app after creating notifications." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSn-hC-vxc">
-                                <rect key="frame" x="65" y="572" width="285" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NrC-Cj-Hr2">
+                                <rect key="frame" x="69" y="172" width="276.5" height="610"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Notification" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOf-ht-jGl">
+                                        <rect key="frame" x="0.0" y="0.0" width="276.5" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a notification for your iPhone that plays a short message in your own voice." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-tN-5oN">
+                                        <rect key="frame" x="0.0" y="192" width="276.5" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYI-cZ-daj">
+                                        <rect key="frame" x="0.0" y="404.5" width="276.5" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="createButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wxn-dO-ydw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close app after creating notification." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSn-hC-vxc">
+                                        <rect key="frame" x="0.0" y="589.5" width="276.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NrC-Cj-Hr2" secondAttribute="trailing" constant="68.5" id="2hs-RG-Uok"/>
+                            <constraint firstItem="NrC-Cj-Hr2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="5Li-dH-jbP"/>
+                            <constraint firstItem="NrC-Cj-Hr2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="I5X-Oj-KIr"/>
+                            <constraint firstItem="NrC-Cj-Hr2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="wIV-fX-Zuk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qVb-TH-zVA"/>
                     <connections>
                         <segue destination="2uH-9C-Xwm" kind="show" identifier="welcomeSegue" id="GzR-er-KCM"/>
                         <segue destination="4Uk-hl-swb" kind="show" identifier="createSegue" id="p7b-fW-W27"/>
@@ -47,16 +69,32 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="71.651785714285708"/>
         </scene>
-        <!--Create Voice Notification View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Tbm-Cl-oeB">
+            <objects>
+                <navigationController id="Bnd-Pu-RsW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qC-QD-oLN">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KFK-hn-YP9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7M-lC-oR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="-646"/>
+        </scene>
+        <!--Create Voice Notification-->
         <scene sceneID="VO3-SA-5dq">
             <objects>
                 <viewController id="4Uk-hl-swb" customClass="CreateVoiceNotificationViewController" customModule="Voice_Notifications" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ggk-9V-jSR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2P0-Ev-fXJ">
-                                <rect key="frame" x="20" y="20" width="374" height="846"/>
+                                <rect key="frame" x="20" y="112" width="374" height="730"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Voice Notification" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uly-ra-0xq">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
@@ -64,35 +102,31 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Reminder to complete your task." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-cx-Pep" userLabel="Body Text View">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="486"/>
+                                        <rect key="frame" x="0.0" y="51" width="374" height="412.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyo-5P-p52">
-                                        <rect key="frame" x="0.0" y="545" width="374" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="471.5" width="374" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Record Voice"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Record Message"/>
                                         <connections>
                                             <action selector="recordButtonPressed:" destination="4Uk-hl-swb" eventType="touchUpInside" id="Oma-AY-kcA"/>
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKf-ma-EZJ">
-                                        <rect key="frame" x="0.0" y="587.5" width="374" height="216"/>
+                                        <rect key="frame" x="0.0" y="514" width="374" height="216"/>
                                         <connections>
                                             <action selector="datePicked:" destination="4Uk-hl-swb" eventType="valueChanged" id="C8F-1n-LBc"/>
                                         </connections>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nx3-L9-L8o">
-                                        <rect key="frame" x="0.0" y="811.5" width="374" height="34.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Set Notification"/>
-                                        <connections>
-                                            <action selector="setNotificationButtonPressed:" destination="4Uk-hl-swb" eventType="touchUpInside" id="KfG-y1-Z8o"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xyo-5P-p52" secondAttribute="trailing" id="BTj-G9-bBA"/>
+                                    <constraint firstItem="xyo-5P-p52" firstAttribute="leading" secondItem="2P0-Ev-fXJ" secondAttribute="leading" id="tYw-7x-YRL"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="drN-KP-2zG"/>
@@ -104,27 +138,100 @@
                             <constraint firstItem="2P0-Ev-fXJ" firstAttribute="top" secondItem="drN-KP-2zG" secondAttribute="top" constant="20" id="U7g-aP-vmm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nwL-t7-5o7"/>
+                    <navigationItem key="navigationItem" title="Create Voice Notification" id="2ML-jU-JZg">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Kf6-qp-u3Y">
+                            <connections>
+                                <action selector="setNotificationButtonPressed:" destination="4Uk-hl-swb" id="tee-GH-hd3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bodyTextField" destination="UMb-cx-Pep" id="4bZ-OH-pTD"/>
                         <outlet property="datePicker" destination="gKf-ma-EZJ" id="tgs-zN-Okf"/>
+                        <outlet property="recordButton" destination="xyo-5P-p52" id="RZe-pw-5dp"/>
+                        <outlet property="saveBarButton" destination="Kf6-qp-u3Y" id="25Z-cz-zbW"/>
                         <outlet property="titleTextField" destination="Uly-ra-0xq" id="W6a-Kh-Zx8"/>
+                        <segue destination="jaO-Xn-iap" kind="show" identifier="recordSegue" id="yzZ-qy-Ghr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ty2-aj-eaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="849" y="72"/>
         </scene>
+        <!--Record Message-->
+        <scene sceneID="MpT-h1-Bdd">
+            <objects>
+                <viewController id="jaO-Xn-iap" customClass="RecordMessageViewController" customModule="Voice_Notifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4i1-ns-Pxs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uxs-yX-5Pm">
+                                <rect key="frame" x="20" y="92" width="365.5" height="486"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mic" translatesAutoresizingMaskIntoConstraints="NO" id="LrL-HL-ztc">
+                                        <rect key="frame" x="0.0" y="0.0" width="365.5" height="341.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-Qp-xDK">
+                                        <rect key="frame" x="0.0" y="341.5" width="365.5" height="144.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d75-dH-eUy">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="144.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Record"/>
+                                                <connections>
+                                                    <action selector="recordButtonPressed:" destination="jaO-Xn-iap" eventType="touchUpInside" id="UVZ-y8-lxd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmy-fc-8ko">
+                                                <rect key="frame" x="183" y="0.0" width="182.5" height="144.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                                <connections>
+                                                    <action selector="playButtonPressed:" destination="jaO-Xn-iap" eventType="touchUpInside" id="Sn7-hv-2JZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IgU-HN-QrU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IgU-HN-QrU" firstAttribute="bottom" secondItem="Uxs-yX-5Pm" secondAttribute="bottom" constant="284" id="6Wy-36-Dsc"/>
+                            <constraint firstItem="Uxs-yX-5Pm" firstAttribute="top" secondItem="IgU-HN-QrU" secondAttribute="top" id="hUF-ue-UM4"/>
+                            <constraint firstItem="Uxs-yX-5Pm" firstAttribute="leading" secondItem="IgU-HN-QrU" secondAttribute="leading" constant="20" id="t49-oM-6x3"/>
+                            <constraint firstItem="IgU-HN-QrU" firstAttribute="trailing" secondItem="Uxs-yX-5Pm" secondAttribute="trailing" constant="28.5" id="zUb-Ja-BdJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Record Message" id="WgI-iu-YRq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Z1x-gl-GbD">
+                            <connections>
+                                <action selector="saveBarButtonPressed:" destination="jaO-Xn-iap" id="V0b-sP-846"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playButton" destination="hmy-fc-8ko" id="fkz-FB-vs4"/>
+                        <outlet property="recordButton" destination="d75-dH-eUy" id="Ime-or-FWx"/>
+                        <outlet property="saveButton" destination="Z1x-gl-GbD" id="V9l-kb-05o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wo4-6g-3AN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="72"/>
+        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="ak1-sS-ogo">
             <objects>
                 <viewController id="2uH-9C-Xwm" customClass="WelcomeViewController" customModule="Voice_Notifications" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SuI-lr-hf2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2zC-k6-n7B">
-                                <rect key="frame" x="20" y="298" width="374" height="290.5"/>
+                                <rect key="frame" x="20" y="303" width="374" height="290.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Voice Notifications!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbD-1u-wda">
                                         <rect key="frame" x="76" y="0.0" width="222" height="67.5"/>
@@ -175,6 +282,8 @@ The only notifications this app will send are the ones you create.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Mic" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0A42662B759A7F0025D7BF /* RecordMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A42652B759A7F0025D7BF /* RecordMessageViewController.swift */; };
 		CD1A19562780B741006AB797 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A19552780B741006AB797 /* SoundManager.swift */; };
 		CD1A19582780CDA8006AB797 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A19572780CDA8006AB797 /* Notification.swift */; };
 		CD8006642786AA32001F0BB9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD8006632786AA32001F0BB9 /* README.md */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB0A42652B759A7F0025D7BF /* RecordMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMessageViewController.swift; sourceTree = "<group>"; };
 		CD1A19552780B741006AB797 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		CD1A19572780CDA8006AB797 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		CD8006632786AA32001F0BB9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				CD97ED05277FBDC40084E94A /* SceneDelegate.swift */,
 				CD97ED07277FBDC40084E94A /* ViewController.swift */,
 				CD97ED09277FBDC40084E94A /* Main.storyboard */,
+				BB0A42652B759A7F0025D7BF /* RecordMessageViewController.swift */,
 				CD97ED19278009740084E94A /* CreateVoiceNotificationViewController.swift */,
 				CD1A19572780CDA8006AB797 /* Notification.swift */,
 				CD1A19552780B741006AB797 /* SoundManager.swift */,
@@ -160,6 +163,7 @@
 				CD1A19582780CDA8006AB797 /* Notification.swift in Sources */,
 				CD97ED1A278009740084E94A /* CreateVoiceNotificationViewController.swift in Sources */,
 				CD97ED06277FBDC40084E94A /* SceneDelegate.swift in Sources */,
+				BB0A42662B759A7F0025D7BF /* RecordMessageViewController.swift in Sources */,
 				CD1A19562780B741006AB797 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

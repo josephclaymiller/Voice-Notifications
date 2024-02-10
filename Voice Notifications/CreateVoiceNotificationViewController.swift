@@ -8,11 +8,15 @@
 import UIKit
 
 class CreateVoiceNotificationViewController: UIViewController, UIPickerViewDelegate {
-  @IBOutlet var titleTextField: UITextField!
-  @IBOutlet var bodyTextField: UITextView!
-  @IBOutlet var datePicker: UIDatePicker!
+  @IBOutlet weak var titleTextField: UITextField!
+  @IBOutlet weak var bodyTextField: UITextView!
+  @IBOutlet weak var datePicker: UIDatePicker!
+  @IBOutlet weak var saveBarButton: UIBarButtonItem!
+  @IBOutlet weak var recordButton: UIButton!
   
   var isRecording: Bool = false
+  var recordedMessageFilename: String?
+  var saveEnabled: Bool = false
   
   // sound manager to manage audio recordings
   let soundManager = SoundManager.shared
@@ -21,32 +25,32 @@ class CreateVoiceNotificationViewController: UIViewController, UIPickerViewDeleg
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    print("Create Voice Notification view loaded")
   }
   
-  @IBAction func recordButtonPressed(_ sender: UIButton) {
-    print(#function)
-    soundManager.toggleRecording()
-    switch isRecording {
-    case false:
-      sender.setTitle("Stop Recording", for: .normal)
-    case true:
-      sender.setTitle("Re-record", for: .normal)
+  override func viewDidAppear(_ animated: Bool) {
+    print("Create Voice Notification view appeared")
+    saveBarButton.isEnabled = saveEnabled
+    if saveEnabled {
+      recordButton.setTitle("Re-record Message", for: .normal)
     }
-    isRecording = !isRecording
+  }
+
+  // transition to record message view
+  @IBAction func recordButtonPressed(_ sender: UIButton) {
+    print("Record message Segue")
+    performSegue(withIdentifier: "recordSegue", sender: self)
   }
   
-  @IBAction func setNotificationButtonPressed(_ sender: UIButton) {
+  @IBAction func setNotificationButtonPressed(_ sender: Any) {
     print(#function)
     let seconds = datePicker.countDownDuration
     let title = titleTextField.text!
     let body = bodyTextField.text!
     let notification = Notification(title: title, body: body, seconds: seconds)
     print("\(notification.title) in \(notification.seconds) seconds")
-    // dismiss view
-    self.dismiss(animated: true) {
-      print("Closed create notification view")
-    }
-    
+  
+    navigationController?.popViewController(animated: true)
   }
   
   // TODO: Let user set date for notification instead of timer
@@ -54,15 +58,24 @@ class CreateVoiceNotificationViewController: UIViewController, UIPickerViewDeleg
       print(#function)
       print(sender.countDownDuration) // time selected in seconds
     }
+  
+  func testFunc() {
+    print(#function)
+  }
 
-  /*
+  
    // MARK: - Navigation
    
    // In a storyboard-based application, you will often want to do a little preparation before navigation
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
    // Get the new view controller using segue.destination.
    // Pass the selected object to the new view controller.
+     if segue.identifier == "recordSegue" {
+       print("Prepare for segue to record voice view controller")
+       let recordView = segue.destination as! RecordMessageViewController
+       recordView.delegate = self
+     }
    }
-   */
+   
   
 }

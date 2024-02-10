@@ -5,7 +5,7 @@ Create notifications for your iPhone that play a short message in your own voice
 Download code and open "Voice Notifications.xcodeproj" in Xcode. Plug in device or choose simulator then press play. Give the app permissions to send notifications and to use the microphone. Press the "Create Voice Notification" button. Select the title and description for your voice notification. Select the "Record Voice" button to record your voice notification. Select the number of minutes and hours to wait until being notified then select the "Set Notification" button. Close the app. After the time interval specified the notification will be sent and you will hear your voice notification.
 
 ## Development
-Time spent: **14** hours
+Time spent: **17** hours
 
 ### User Stories
 
@@ -23,6 +23,7 @@ The following functionality is completed:
 - [x] User can set message for notification
 - [x] User can play voice clip
 - [x] App Icon
+- [x] Multiple Views
 
 Planned Features:
 

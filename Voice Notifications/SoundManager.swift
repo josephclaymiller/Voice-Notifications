@@ -14,10 +14,11 @@ class SoundManager: NSObject, AVAudioRecorderDelegate {
   var recordingSession: AVAudioSession!
   var audioRecorder: AVAudioRecorder!
   var audioPlayer: AVAudioPlayer!
-  let audioFileName = "voice_memo_recording.m4a"
   var audioFileURL: URL {
     SoundManager.getSoundFolder().appendingPathComponent(audioFileName)
   }
+  var hasRecording: Bool = false
+  let audioFileName = "voice_memo_recording.m4a"
   
   override init() {
     super.init()
@@ -56,7 +57,7 @@ class SoundManager: NSObject, AVAudioRecorderDelegate {
       audioRecorder.delegate = self
       audioRecorder.record()
       
-      // TODO: set record button to say "stop"
+      // TODO: stop recording after 30 seconds
       
     } catch {
       finishRecording(success: false)
@@ -85,6 +86,7 @@ class SoundManager: NSObject, AVAudioRecorderDelegate {
     
     if success {
       // TODO: recordButton.setTitle("Re-record", for: .normal)
+      hasRecording = true
     } else {
       // TODO: recordButton.setTitle("Record", for: .normal)
       // recording failed :(

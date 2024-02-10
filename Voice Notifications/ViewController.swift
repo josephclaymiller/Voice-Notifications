@@ -21,9 +21,10 @@ class ViewController: UIViewController {
     if defaults.value(forKey: "isNewUser") == nil {
       defaults.set(true, forKey: "isNewUser")
     }
-    
+    #if DEBUG
     // cancel all notifications previously scheduled for testing
     notificationCenter.removeAllPendingNotificationRequests()
+    #endif
   }
   
   override func viewDidAppear(_ animated: Bool) {
